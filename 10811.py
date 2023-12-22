@@ -1,12 +1,16 @@
+def reverse_baskets(N, M, orders):
+    baskets = list(range(1, N + 1))
+
+    for order in orders:
+        i, j = order
+        baskets[i - 1:j] = reversed(baskets[i - 1:j])
+
+    return baskets
+
+# 입력 받기
 N, M = map(int, input().split())
+orders = [list(map(int, input().split())) for _ in range(M)]
 
-basket = [i for i in range(1,N+1)]
-
-for i in range(M):
-    i,j = map(int, input().split())
-    temp = basket[i-1:j]
-    temp.reverse()
-    basket[i-1:j] = temp
-
-for i in range(N):
-    print(basket[i], end = ' ')
+# 결과 출력
+result = reverse_baskets(N, M, orders)
+print(*result)
