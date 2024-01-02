@@ -1,4 +1,3 @@
-
 paper = [[0]*101 for i in range(101)]
 
 for _ in range(int(input())):
@@ -8,6 +7,7 @@ for _ in range(int(input())):
             paper[a+i][b+j] = 1
 
 r = 0
+# test date : 2024-01-02
 for i in paper:
     r += sum(i)
 print(r)
