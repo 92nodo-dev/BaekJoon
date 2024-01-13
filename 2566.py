@@ -12,3 +12,4 @@ for i in range(9) :
 print(maxValue)
 print(str(x) + " " + str(y))
 
+#test
